@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import { getThumbnails } from '../services/imageService'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -44,7 +45,7 @@ const ImageGridView = () => {
             >
         <div>
         {current && current.map(item => (
-            <img key={item[0]} src={item[1]} alt='placeholder' />
+            <Link to={'/image/' + item[0]} key={item[0]}><img  src={item[1]} alt='placeholder' /></Link>
         ))}
         </div>
         </InfiniteScroll>
