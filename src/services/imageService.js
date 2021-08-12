@@ -5,3 +5,9 @@ export const getThumbnails = async () => {
     let responseJSON = await response.json()
     return responseJSON.map(r => [r.id, r.thumbnailUrl])
 }
+
+export const getDetails = async (id) => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/photos/' + id)
+    let responseJSON = await response.json()
+    return responseJSON
+}

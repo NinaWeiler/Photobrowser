@@ -45,7 +45,7 @@ const ImageGridView = () => {
             >
         <div>
         {current && current.map(item => (
-            <Link to={'/image/' + item[0]} key={item[0]}><img  src={item[1]} alt='placeholder' /></Link>
+            <Link to={{pathname:`/image/${item[0]}`, state: {id:`${item[0]}`} }} key={item[0]}><img  src={item[1]} alt='placeholder' /></Link>
         ))}
         </div>
         </InfiniteScroll>
