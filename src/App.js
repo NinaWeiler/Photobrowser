@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ImageGridView from './pages/ImageGridView';
 
