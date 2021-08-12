@@ -1,13 +1,25 @@
+import axios from 'axios'
+const baseUrl = 'https://jsonplaceholder.typicode.com'
 
 // returns photo id and thumbbnail url
 export const getThumbnails = async () => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/photos/')
-    let responseJSON = await response.json()
-    return responseJSON.map(r => [r.id, r.thumbnailUrl])
+    let response
+    try {
+        response = await axios.get(baseUrl + '/photos/')
+        return response.data.slice(0, 200).map(r => [r.id, r.thumbnailUrl])
+    } catch (err) {
+        return response.error
+    }
 }
 
+// returns full photo object
 export const getDetails = async (id) => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/photos/' + id)
-    let responseJSON = await response.json()
-    return responseJSON
+    let response
+    try {
+        response = await axios.get(baseUrl + '/photos/' + id)
+        return response.data
+    } catch (err) {
+        return response.error
+    }
 }
+
