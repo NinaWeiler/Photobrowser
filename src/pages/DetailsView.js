@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { getDetails } from '../services/imageService'
+import { ImageDetails } from '../styles/styles'
 
 const DetailsView = (props) => {
     const id = props.history.location.state.id
@@ -15,10 +16,10 @@ const DetailsView = (props) => {
     console.log('image', image)
 
     return (
-        <>
-        <p>{image.title}</p>
+        <ImageDetails>
+        <h1>{image.title}</h1>
         <img src={image.url} alt='placeholder' />
-        </>
+        </ImageDetails>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
 import { getThumbnails } from '../services/imageService'
+import ImageThumbnail from '../components/ImageThumbnail'
+import { GalleryContainer } from '../styles/styles'
 
 
 const GalleryView = () => {
@@ -20,10 +21,11 @@ const GalleryView = () => {
     return (
         <>
         <h2>Welcome to the gallery</h2>
-        {images && images.map(item => (
-            <Link to={{pathname:`/image/${item[0]}`, state: {id:`${item[0]}`} }} key={item[0]}><img  src={item[1]} alt='placeholder' /></Link>
+        <GalleryContainer>
+        {images && images.map(image => (
+            <ImageThumbnail image={image} key={image[0]}/>
         ))}
-        
+        </GalleryContainer>
         </>
     )
 }
