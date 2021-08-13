@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { getThumbnails } from '../services/imageService'
 import ImageThumbnail from '../components/ImageThumbnail'
-import { GalleryContainer } from '../styles/styles'
+import { GalleryContainer, ButtonToTop } from '../styles/styles'
 
 
 const GalleryView = () => {
@@ -17,16 +17,18 @@ const GalleryView = () => {
         fetchData()
     }, [])
     
+    const goToTop = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     
     return (
-        <>
         <GalleryContainer>
             <h1>Welcome to the gallery</h1>
             {images && images.map(image => (
                 <ImageThumbnail image={image} key={image[0]}/>
             ))}
+            <ButtonToTop onClick={goToTop}>^</ButtonToTop>
         </GalleryContainer>
-        </>
     )
 }
 
