@@ -52,22 +52,20 @@ export const ImageDetails = styled(Container)`
   }
 `;
 
-export const ButtonToTop = styled.button`
+export const RoundButton = styled.button`
   display: block; 
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  position: fixed; 
+  bottom: 20px; 
+  right: 10px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #00868B;
+  color: #FAFAFA;
+  cursor: pointer; 
+  padding: 8px; 
   border-radius: 100%;
-  font-size: 18px; /* Increase font size */
-
   :hover {
-      background-color: #555;
+      background-color: #4A777A;
   }
 `;

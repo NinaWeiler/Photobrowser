@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { getThumbnails } from '../services/imageService'
 import ImageThumbnail from '../components/ImageThumbnail'
-import { GalleryContainer, ButtonToTop } from '../styles/styles'
+import { GalleryContainer, RoundButton } from '../styles/styles'
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 
 const GalleryView = () => {
@@ -27,7 +28,7 @@ const GalleryView = () => {
             {images && images.map(image => (
                 <ImageThumbnail image={image} key={image[0]}/>
             ))}
-            <ButtonToTop onClick={goToTop}>^</ButtonToTop>
+            <RoundButton onClick={goToTop}><ExpandLessIcon fontSize='large'/></RoundButton>
         </GalleryContainer>
     )
 }
