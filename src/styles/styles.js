@@ -11,9 +11,12 @@ export const Thumbnail = styled.img`
 
 export const GalleryContainer = styled.div`
   padding: 0 1rem;
+  h1 {
+    font-size: calc(10px + 2vmin);
+  }
 
   @media (min-width: 900px) {
-      padding: 0 5rem;
+    padding: 0 5rem;
   }
 
   @media (min-width: 1068px) {
@@ -21,25 +24,30 @@ export const GalleryContainer = styled.div`
   }
 `;
 
-const FlexContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const ImageDetails = styled(FlexContainer)`
+export const ImageDetails = styled(Container)`
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  max-width: 600px
-
+  padding: 1rem;
   h1 {
     font-size: calc(10px + 2vmin);
   }
 
   img {
-    flex-shrink: 0 1 100%;
+    width: 80%;
     border-radius: 3px;
     margin: 1rem;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 300px;
+    }
   }
 `;

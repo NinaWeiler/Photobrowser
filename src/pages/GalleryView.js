@@ -20,11 +20,11 @@ const GalleryView = () => {
     
     return (
         <>
-        <h2>Welcome to the gallery</h2>
         <GalleryContainer>
-        {images && images.map(image => (
-            <ImageThumbnail image={image} key={image[0]}/>
-        ))}
+            <h1>Welcome to the gallery</h1>
+            {images && images.map(image => (
+                <ImageThumbnail image={image} key={image[0]}/>
+            ))}
         </GalleryContainer>
         </>
     )
