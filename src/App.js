@@ -3,6 +3,7 @@ import ImageGridView from './pages/ImageGridView';
 import DetailsView from './pages/DetailsView'
 import GalleryView from './pages/GalleryView';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import GlobalStyles from './styles/GlobalStyle';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/image/:id' component={DetailsView} />
         <Route render={() => <h1>Page not found</h1>} />
       </Switch>
+      <Footer/>
       </BrowserRouter>
     </div>
   );
