@@ -31,6 +31,7 @@ body{
     color: black;
     text-align: center;
 
+
     a {
         text-decoration: none;
         color: black;

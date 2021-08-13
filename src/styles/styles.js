@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 
 export const Thumbnail = styled.img`
     border-radius: 3px;
@@ -53,19 +54,39 @@ export const ImageDetails = styled(Container)`
 `;
 
 export const RoundButton = styled.button`
-  display: block; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 10px; 
-  z-index: 99; 
-  border: none; 
-  outline: none; 
-  background-color: #00868B;
-  color: #FAFAFA;
-  cursor: pointer; 
-  padding: 8px; 
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #00868b;
+  color: #fafafa;
+  cursor: pointer;
+  padding: 8px;
   border-radius: 100%;
   :hover {
-      background-color: #4A777A;
+    background-color: #4a777a;
   }
+`;
+
+export const TopLeftButton = styled.button`
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: inherit;
+
+`;
+
+export const BackIcon = styled(KeyboardBackspaceIcon)`
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 30px !important;
+  /*display: flex !important;*/
 `;
