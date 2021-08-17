@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { TopLeftButton, BackIcon, RoundButton } from '../styles/GalleryStyles'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-
+import Tooltip from '@material-ui/core/Tooltip';
 
 
 export const BackButton = ({handleClick}) => {
     return (
-     
+        <Tooltip title={<h1>Previous view</h1>} aria-label='Previous image'>
             <TopLeftButton onClick={handleClick}><BackIcon/></TopLeftButton>
+        </Tooltip>
       
     )
 }

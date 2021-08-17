@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { getDetails } from "../services/imageService";
 import { Link } from "react-router-dom";
-import { ImageDetails, Container, LeftArrow, RightArrow } from "../styles/GalleryStyles";
+import { getDetails } from "../services/imageService";
+import { ImageDetails, Container, FlexCenterContainer, LeftArrow, RightArrow } from "../styles/GalleryStyles";
 import { BackButton } from "../components/Buttons";
+
+
 
 const DetailsView = (props) => {
   const id = Number(props.match.params.id)
@@ -28,11 +30,11 @@ const DetailsView = (props) => {
         {id <= 1 ? (
           <></>
         ) : (
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <FlexCenterContainer>
             <Link to={{ pathname: `/image/${id - 1}`}}>
               <LeftArrow />
             </Link>
-          </div>
+          </FlexCenterContainer>
         )}
       </>
     );
@@ -44,16 +46,15 @@ const DetailsView = (props) => {
         {id >= 200 ? (
           <></>
         ) : (
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <FlexCenterContainer>
             <Link to={{ pathname: `/image/${id + 1}`}}>
               <RightArrow />
             </Link>
-          </div>
+          </FlexCenterContainer>
         )}
       </>
     );
   };
-
 
   return (
     <>

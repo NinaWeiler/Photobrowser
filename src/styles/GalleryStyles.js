@@ -35,6 +35,11 @@ export const Container = styled.div`
   padding-bottom: 9rem;
 `;
 
+export const FlexCenterContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const ImageDetails = styled(Container)`
   align-items: center;
   flex-direction: column;
@@ -98,13 +103,13 @@ export const BackIcon = styled(KeyboardBackspaceIcon)`
 `;
 
 export const LeftArrow = styled(KeyboardArrowLeftIcon)`
-  width: 30px !important;
-  height: 30px !important;
-  font-size: 30px !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 40px !important;
 `;
 
 export const RightArrow = styled(KeyboardArrowRightIcon)`
-  width: 30px !important;
-  height: 30px !important;
-  font-size: 30px !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 40px !important;
 `;
