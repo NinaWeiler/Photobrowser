@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 
+// used in GalleryView
 export const Thumbnail = styled.img`
     border-radius: 3px;
     margin: 1rem;
@@ -11,23 +12,25 @@ export const Thumbnail = styled.img`
 `;
 
 export const GalleryContainer = styled.div`
-  padding: 0 1rem;
+  padding: 0 1rem 9rem 1rem;
   h1 {
     font-size: calc(10px + 2vmin);
   }
 
   @media (min-width: 900px) {
-    padding: 0 5rem;
+    padding: 0 5rem 9rem 5rem;
   }
 
   @media (min-width: 1068px) {
-    padding: 0 10rem;
+    padding: 0 10rem 9rem 10rem;
   }
 `;
 
+// used in DetailsView
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 9rem;
 `;
 
 export const ImageDetails = styled(Container)`
@@ -36,6 +39,7 @@ export const ImageDetails = styled(Container)`
   padding: 1rem;
   h1 {
     font-size: calc(10px + 2vmin);
+    width: 500px;
   }
 
   img {
@@ -53,10 +57,11 @@ export const ImageDetails = styled(Container)`
   }
 `;
 
+// button to top of page
 export const RoundButton = styled.button`
   display: block;
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 10px;
   z-index: 99;
   border: none;
@@ -71,9 +76,10 @@ export const RoundButton = styled.button`
   }
 `;
 
+// back button
 export const TopLeftButton = styled.button`
   display: block;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   z-index: 99;

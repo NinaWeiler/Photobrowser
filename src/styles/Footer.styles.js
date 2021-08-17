@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-    position: relative;
+    position: absolute;
     bottom: 0;
     height: 60px;
     width: 100%;
@@ -9,8 +9,6 @@ export const FooterContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    box-shadow: 0px 2px 10px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.10);
     background-color: #FAFAFA;
-
-
 `

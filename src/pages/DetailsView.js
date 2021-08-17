@@ -1,32 +1,33 @@
-import React, {useState, useEffect} from 'react'
-import { getDetails } from '../services/imageService'
-import { ImageDetails, Container } from '../styles/styles'
-import { BackButton } from '../components/Buttons'
+import React, { useState, useEffect } from "react";
+import { getDetails } from "../services/imageService";
+import { ImageDetails, Container } from "../styles/GalleryStyles";
+import { BackButton } from "../components/Buttons";
 
 const DetailsView = (props) => {
-    const id = props.history.location.state.id
-    const [image, setImage] = useState({})
-    
-    useEffect(() => {
-        const fetchData = async () => {
-            const data =  await getDetails(id)
-            await setImage(data)
-        }
-        fetchData()
-    }, [])
-    console.log('image', image)
+  const id = props.history.location.state.id;
+  const [image, setImage] = useState({});
 
-    return (
-        <>
-        <BackButton/>
-        <Container>
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getDetails(id);
+      await setImage(data);
+    };
+    fetchData();
+  }, []);
+
+  const { title, url } = image;
+
+  return (
+    <>
+      <BackButton />
+      <Container>
         <ImageDetails>
-        <h1>{image.title}</h1>
-        <img src={image.url} alt='placeholder' />
+          <h1>{title}</h1>
+          <img src={url} alt="block of color" />
         </ImageDetails>
-        </Container>
-        </>
-    )
-}
+      </Container>
+    </>
+  );
+};
 
-export default DetailsView
+export default DetailsView;

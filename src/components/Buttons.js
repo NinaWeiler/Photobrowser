@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { TopLeftButton, BackIcon, RoundButton } from '../styles/styles'
+import { TopLeftButton, BackIcon, RoundButton } from '../styles/GalleryStyles'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 

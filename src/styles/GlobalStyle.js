@@ -20,7 +20,7 @@ html {
     }
 }
 
-body{
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -30,15 +30,13 @@ body{
     background: #FAFAFA;
     color: black;
     text-align: center;
-
+    position: relative;
+    min-height: 100vh;
 
     a {
         text-decoration: none;
         color: black;
     }
-
-    
-
 }
 `;
 

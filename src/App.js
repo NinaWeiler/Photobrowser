@@ -1,5 +1,4 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import ImageGridView from './pages/ImageGridView';
 import DetailsView from './pages/DetailsView'
 import GalleryView from './pages/GalleryView';
 import NavBar from './components/NavBar';
