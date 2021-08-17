@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 // used in GalleryView
 export const Thumbnail = styled.img`
@@ -87,12 +89,22 @@ export const TopLeftButton = styled.button`
   border: none;
   outline: none;
   background-color: inherit;
-
 `;
 
 export const BackIcon = styled(KeyboardBackspaceIcon)`
   width: 30px !important;
   height: 30px !important;
   font-size: 30px !important;
-  /*display: flex !important;*/
+`;
+
+export const LeftArrow = styled(KeyboardArrowLeftIcon)`
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 30px !important;
+`;
+
+export const RightArrow = styled(KeyboardArrowRightIcon)`
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 30px !important;
 `;

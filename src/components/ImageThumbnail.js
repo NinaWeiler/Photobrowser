@@ -7,7 +7,7 @@ import { Thumbnail } from "../styles/GalleryStyles";
 const ImageThumbnail = ({ image }) => {
   return (
     <Link
-      to={{ pathname: `/image/${image[0]}`, state: { id: `${image[0]}` } }}
+      to={{ pathname: `/image/${image[0]}` }}
       key={image[0]}
     >
       <Thumbnail src={image[1]} alt="placeholder" />

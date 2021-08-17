@@ -5,11 +5,11 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 
 
-export const BackButton = () => {
+export const BackButton = ({handleClick}) => {
     return (
-        <Link to='/' >
-            <TopLeftButton><BackIcon/></TopLeftButton>
-        </Link>
+     
+            <TopLeftButton onClick={handleClick}><BackIcon/></TopLeftButton>
+      
     )
 }
 

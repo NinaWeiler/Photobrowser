@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { getDetails } from "../services/imageService";
-import { ImageDetails, Container } from "../styles/GalleryStyles";
+import { Link } from "react-router-dom";
+import { ImageDetails, Container, LeftArrow, RightArrow } from "../styles/GalleryStyles";
 import { BackButton } from "../components/Buttons";
 
 const DetailsView = (props) => {
-  const id = props.history.location.state.id;
+  const id = Number(props.match.params.id)
   const [image, setImage] = useState({});
+
+  const { title, url } = image;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,16 +18,53 @@ const DetailsView = (props) => {
     fetchData();
   }, [id]);
 
-  const { title, url } = image;
+  const handleClick = () => {
+    window.history.back();
+  };
+
+  const Previous = () => {
+    return (
+      <>
+        {id <= 1 ? (
+          <></>
+        ) : (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Link to={{ pathname: `/image/${id - 1}`}}>
+              <LeftArrow />
+            </Link>
+          </div>
+        )}
+      </>
+    );
+  };
+
+  const Next = () => {
+    return (
+      <>
+        {id >= 200 ? (
+          <></>
+        ) : (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Link to={{ pathname: `/image/${id + 1}`}}>
+              <RightArrow />
+            </Link>
+          </div>
+        )}
+      </>
+    );
+  };
+
 
   return (
     <>
-      <BackButton />
+      <BackButton handleClick={handleClick} />
       <Container>
+        <Previous />
         <ImageDetails>
           <h1>{title}</h1>
           <img src={url} alt="block of color" />
         </ImageDetails>
+        <Next />
       </Container>
     </>
   );
