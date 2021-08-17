@@ -13,7 +13,7 @@ const DetailsView = (props) => {
       await setImage(data);
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const { title, url } = image;
 

@@ -6,17 +6,22 @@ import { GoToTopButton } from "../components/Buttons";
 
 
 const GalleryView = () => {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState(JSON.parse(sessionStorage.getItem('data')));
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      console.log('fetching')
       let data = await getThumbnails();
+      sessionStorage.setItem('data', JSON.stringify(data))
       setImages(data);
       setLoading(false);
     };
-    fetchData();
+    const data = sessionStorage.getItem('data')
+    if (!data) {
+      fetchData();
+    }
   }, []);
 
   const goToTop = () => {
