@@ -9,12 +9,16 @@ import { BackButton } from "../components/Buttons";
 const DetailsView = (props) => {
   const id = Number(props.match.params.id)
   const [image, setImage] = useState({});
+  const [error, setError] = useState('')
 
   const { title, url } = image;
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await getDetails(id);
+      if (data.status === 404) {
+        setError('Failed to find image')
+      }
       await setImage(data);
     };
     fetchData();
@@ -59,6 +63,7 @@ const DetailsView = (props) => {
   return (
     <>
       <BackButton handleClick={handleClick} />
+      {error ? error :(
       <Container>
         <Previous />
         <ImageDetails>
@@ -67,6 +72,7 @@ const DetailsView = (props) => {
         </ImageDetails>
         <Next />
       </Container>
+      )}
     </>
   );
 };

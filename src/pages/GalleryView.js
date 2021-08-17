@@ -8,12 +8,19 @@ import { GoToTopButton } from "../components/Buttons";
 const GalleryView = () => {
   const [images, setImages] = useState(JSON.parse(sessionStorage.getItem('data')));
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      console.log('fetching')
       let data = await getThumbnails();
+      if (data.status === 404) {
+        sessionStorage.clear()
+        setError('Error fetching images')
+        setLoading(false);
+        return
+      } 
+      setError('')
       sessionStorage.setItem('data', JSON.stringify(data))
       setImages(data);
       setLoading(false);
@@ -31,6 +38,7 @@ const GalleryView = () => {
   return (
     <>
       {loading ? <h2>Loading... </h2> : <h2>Welcome to the gallery</h2>}
+      {error ? error : <></>}
       <GalleryContainer>
         {images &&
           images.map((image) => (

@@ -8,7 +8,7 @@ export const getThumbnails = async () => {
         response = await axios.get(baseUrl + '/photos/')
         return response.data.slice(0, 200).map(r => [r.id, r.thumbnailUrl])
     } catch (err) {
-        return response.error
+        return err.response
     }
 }
 
@@ -19,7 +19,7 @@ export const getDetails = async (id) => {
         response = await axios.get(baseUrl + '/photos/' + id)
         return response.data
     } catch (err) {
-        return response.error
+        return err.response
     }
 }
 
