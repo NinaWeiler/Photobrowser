@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom/extend-expect'
-import { render, fireEvent, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import ImageThumbnail from '../components/ImageThumbnail'
 
 test('Renders correct thumbnail', () => {
@@ -16,4 +16,3 @@ test('Renders correct thumbnail', () => {
     const pic = screen.getByRole('img')
     expect(pic).toHaveAttribute('src', 'https://via.placeholder.com/150/56a8c2')
 })
-
