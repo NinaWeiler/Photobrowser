@@ -9,7 +9,7 @@ const ImageThumbnail = ({ image }) => {
     <Link
       to={{ pathname: `/image/${image[0]}` }}
       key={image[0]}
-      data-testid='thumb'
+      data-testid="thumb"
     >
       <Thumbnail src={image[1]} alt="placeholder" />
     </Link>
