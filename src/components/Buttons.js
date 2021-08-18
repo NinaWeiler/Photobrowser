@@ -6,7 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 export const BackButton = ({handleClick}) => {
     return (
-        <Tooltip title={<h1>Previous view</h1>} aria-label='Previous image'>
+        <Tooltip title={<h1>Go back</h1>} aria-label='Go back'>
             <TopLeftButton onClick={handleClick}><BackIcon/></TopLeftButton>
         </Tooltip>
       
