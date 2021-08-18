@@ -15,6 +15,6 @@ export const BackButton = ({handleClick}) => {
 
 export const GoToTopButton = ({handleClick}) => {
     return (
-        <RoundButton onClick={handleClick}><ExpandLessIcon fontSize='large'/></RoundButton>
+        <RoundButton onClick={handleClick} data-testid='#topButton'><ExpandLessIcon fontSize='large' /></RoundButton>
     )
 }
