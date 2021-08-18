@@ -4,7 +4,6 @@
 ## Project description
 The goal of the app was to create a simple app that renders a grid of images and allows navigation from each image to a details page. The images used are from [JSONPlaceholder](http://jsonplaceholder.typicode.com/). No external image gallery packages or libraries were used.
 
-The project instructions can be found [here](https://gist.github.com/naniantero/58cb5d4efb4edc7f0d5d414318861db4). 
 
 ## Demo
 A live version of this app can be found at [photobrowsing.herokuapp.com](https://photobrowsing.herokuapp.com/)
