@@ -26,6 +26,7 @@ const GalleryView = () => {
       setImages(data);
       setLoading(false);
     };
+    // if data is in session storage, don't fetch it again
     const data = sessionStorage.getItem("data");
     if (!data) {
       fetchData();

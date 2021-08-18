@@ -28,10 +28,12 @@ const DetailsView = (props) => {
     fetchData();
   }, [id]);
 
+  //goes back to previous view (previous image or home page)
   const handleClick = () => {
     window.history.back();
   };
 
+  //navigate to previous image from the grid
   const Previous = () => {
     return (
       <>
@@ -48,6 +50,7 @@ const DetailsView = (props) => {
     );
   };
 
+  //navigate to next image
   const Next = () => {
     return (
       <>
