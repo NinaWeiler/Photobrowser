@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import AppsIcon from '@material-ui/icons/Apps';
 
-
 export const NavContainer = styled.nav`
   font-size: 18px;
   position: relative;

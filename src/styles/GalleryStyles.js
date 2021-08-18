@@ -102,6 +102,7 @@ export const BackIcon = styled(KeyboardBackspaceIcon)`
   font-size: 30px !important;
 `;
 
+// navigation arrows in details view
 export const LeftArrow = styled(KeyboardArrowLeftIcon)`
   width: 40px !important;
   height: 40px !important;
